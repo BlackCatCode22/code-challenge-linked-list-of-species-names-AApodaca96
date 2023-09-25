@@ -1,88 +1,74 @@
-# tCodeChallenge25sep23
-tCodeChallenge25sep23: Create a linked list of animal names. Use Discord and help your classmates!
+# tCppMidterm
+tCppMidterm -- Midterm for C++ Fall '23
 
-Posted: Sept 25, 2023
-by: dH
+Your midterm program will be  a collaboration of lab partners. You will present your program to your classmates on the presentation date and participate in the class code review by accepting all critiques without feedback. For example, a code review committee member says, "Good animal names, but your code was unreadable." and you and your partner say, "Thank you for your feedback."
 
+To constrain the scope to current class instruction, limit input to four animals from each of four species (16 animals).
 
-Linked List of Species Names - C++ Code Challenge
-Introduction
-Welcome to the "Linked List of Species Names" C++ code challenge! This challenge is designed to test your skills in creating a linked list of structs with string data fields representing species and animal names using C++. The goal is to read species and animal names from a file named animalNames.txt and organize them into a linked list data structure.
+The following programming concepts will be demonstrated:
 
-This is a cooperative class assignment, and we encourage you to use platforms like Discord to collaborate and share your coding solutions with your fellow students.
+-- Clear, Concise, and Correct Code: Program must be written in the class programming style guide.
 
-Challenge Description
-Objective
-Your task is to create a C++ program that reads species and animal names from the animalNames.txt file and constructs a linked list of structs to store this information. Each node in the linked list should contain a species name and an animal name, both represented as strings.
+-- File I/O: Create a file, write to a file, open a file, read from a file, close a file, delete a file, append to a file, etc.
 
-Struct Definition
-You should define a struct to represent each node in the linked list. Here's an example definition:
+-- Exception Handling: Standard file IO exceptions, create an exception to handle adding an animal to a habitat that does not have enough room for the new animal.
 
-struct AnimalNode {
-    std::string species;
-    std::string name;
-    AnimalNode* next;
+-- Functions, Classes, and Lists: You must demonstrate functions, classes, and linked list(s) as needed to implement your program design. Array use is your choice! 
 
-    // Constructor to initialize values
-    AnimalNode(const std::string& s, const std::string& n) : species(s), name(n), next(nullptr) {}
-};
+-- Input - File and String Handling: Parse string data from input files. 
 
-File Format
+-- Output - Formatted Output: Output a report listing the zoo animals with their attributes and their habitats (zooPopulation.txt)
 
-The animalNames.txt file will contain data in the following format:
+Animals are arriving from zoos around the world and you must give them names and bithdates and a nice new home (organize then into habitats). To accomplish this task, you will write a Java program that:
 
-Species Name:
+1) Finds the age, sex, species, color, and weight of each animal from an input text file (arrivingAnimals.txt)
 
-Simba, Shere, Khan, ...
+2) Calculate a birthday based on input data
 
-Animal names are seperated by commas.
+3) Create a name for each animal using names collected from a recent community fund raiser (animalNames.txt)
 
-Linked List Construction:
+4) Create a unique ID for each animal to be used in your zoo information system. This id will start with the first two chars of the animal's species. 
 
-You need to read the data from animalNames.txt and construct a linked list where each node contains a species and an animal name. 
-The linked list should be constructed in the order in which the names appear in the file.
+5) The zoo keeper will assign a sound that the animal makes after the animal's physical and assign this sound to a field in the animal's class. 
 
-Sample Code:
+6) Process the animals into appropriate habitats
 
-Here's a sample C++ code snippet to get you started:
+7) Output a report (zooPopulation.txt) containing all zoo animals and their information.
 
+Use at least five functions with the following names. These functions must be explained to the code review committee. The five functions will be named:
 
-#include <iostream>
-#include <fstream>
-#include <string>
+genBirthDay(), genUniqueAnimalID(), genAnimalName(), genZooHabitat(), getArrivalDate()
 
-using namespace std;
+Use file i/o to parse and input the file named arrivingAnimals.txt. Use File i/o to create a report named zooPopulation.txt.  Use the data structures we've been studying to organize your zoo.
 
-struct AnimalNode {
-    string species;
-    string name;
-    AnimalNode* next;
-};
+You will use functions/methods to calculate the following data elements for each animal:
 
-int main() {
-    
-    // Initialize the linked list head
-    AnimalNode* head = nullptr; 
-    
-    // Read data from the file
-    std::ifstream inputFile("animalNames.txt");
-    if (!inputFile) {
-        std::cerr << "Error: Could not open file." << std::endl;
-        return 1;
-    }
+Unique animal ID, animal name, birth date, color, weight, origin
 
-    // TODO: Read data from the file and construct the linked list
+You must place species in their own habitat and output that in a report similar to:
 
-    // TODO: Print the linked list
+Hyena Habitat:
 
-    // TODO: Clean up memory (delete linked list nodes)
+Hy01; Kamari; 4 years old; birth date Mar 21, 2018; tan color; female; 70 pounds; from Friguia Park, Tunisia; arrived Sept 27, 2022
 
-    return 0;
-}
+Lion Habitat:
 
-Modify and expand upon this sample code to complete the challenge. Advanced is to organize thge names into male and female names for each species.
+Li01; Kiara; 6 years old; birth date Sept 21, 2016; tan color; female; 305 pounds; from Zanzibar, Tanzania; arrived Sept 23, 2022
 
-Submission
-Once you have completed the challenge, share your code with your fellow students on Discord. Make sure to test your code thoroughly and ensure it works as expected.
+Names to get you started:
 
-Good luck, and have fun coding!
+Hyena Names:
+
+Shenzi, Banzai, Ed, Zig, Bud, Lou, Kamari, Wema, Nne, Madoa, Prince Nevarah
+
+Lion Names:
+
+Scar, Mufasa, Simba, Kiara, King, Drooper, Kimba, Nala, Leo, Samson, Elsa, Cecil
+
+Bear Names:
+
+Yogi, Smokey, Paddington, Lippy, Bungle, Baloo, Rupert, Winnie the Pooh, Snuggles, Bert
+
+Tiger names:
+
+Tony, Tigger, Amber, Cosimia, Cuddles, Dave, Jiba, Rajah, Rayas, Ryker
